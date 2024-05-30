@@ -13,5 +13,5 @@ Build and start a container with port 8888 exposed from the container.
 
 ```sh
 docker build -t ijavapracticalcleancode .
-docker run --rm -it -p 8888:8888 -v "$(pwd):/home/jovyan/work" -t ijavapracticalcleancode
+docker run --rm -it -p 8888:8888 -v "$(pwd):/home/jovyan" -t ijavapracticalcleancode
 ```
