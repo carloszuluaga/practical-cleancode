@@ -1,3 +1,3 @@
 FROM jbindinga/java-notebook
 
-WORKDIR $HOME
+COPY . $HOME
