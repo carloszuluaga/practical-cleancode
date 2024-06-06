@@ -1,5 +1,13 @@
-# syntax=docker/dockerfile:1
+ARG BASE_CONTAINER=tlinnet/csharp-notebook
+FROM $BASE_CONTAINER
 
-FROM darkbluestudios/jupyter-ijavascript-utils:binder_1.45.0
+USER root
 
-COPY . $HOME
+ADD "CleanCode.ipynb" $HOME
+
+RUN echo "Change mod and convert" && \
+  cd $HOME && \
+  echo $PWD && \
+  fix-permissions CleanCode.ipynb 
+
+USER $NB_USER
