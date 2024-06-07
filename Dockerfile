@@ -2,4 +2,4 @@
 
 FROM darkbluestudios/jupyter-ijavascript-utils:binder_1.45.0
 
-COPY . $HOME
+ADD "CleanCode.ipynb" /home/${NB_USER}/work
